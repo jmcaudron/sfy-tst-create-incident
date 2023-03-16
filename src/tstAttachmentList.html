@@ -1,0 +1,11 @@
+<template>
+  <lightning-card variant="Brand" title={fileLabel} icon-name="standard:file">
+    <ul class="slds-list_vertical slds-has-dividers_bottom-space">
+      <template for:each={attachments} for:item="record">
+        <li class="slds-item" key={record.Id}>
+          <c-tst-attachment-tile attachment={record} onnotifyattachment={handleAttachment}> </c-tst-attachment-tile>
+        </li>
+      </template>
+    </ul>
+  </lightning-card>
+</template>
